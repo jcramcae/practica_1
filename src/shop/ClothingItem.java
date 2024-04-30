@@ -1,14 +1,16 @@
+package shop;
 public class ClothingItem {
+    //State
     private String name;
     private double price;
     private char size;
-//Constructor
+    //Constructor
     public ClothingItem(String name, double price, char size){
-        this.name= name;
+        this. name= name;
         this. price= price;
-        this.size= size;
+        this. size= size;
     }
-//Getters and Setters
+    //Getter & setter
     public String getName(){
         return this.name;
     }
@@ -22,24 +24,29 @@ public class ClothingItem {
         this.price= price;
     }
     public char getSize(){
-        switch(size){
+        switch (size){
             case 'S':
                 return 'S';
-            case 'M':
+            case'M':
                 return 'M';
             case 'L':
                 return 'L';
             default:
                 return 'S';
         }
+
     }
     public void setSize(){
-        this. size= size;
+        this.size= size;
     }
     @Override
     public String toString(){
-        return " Prenda " + name + " Precio " + price + " Tamaño " + size + ".";
+        return "Prenda" + name +"Precio" + price + "Tamaño" + size + ".";
+
     }
+
+
+
 
 
 

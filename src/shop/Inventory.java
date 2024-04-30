@@ -1,3 +1,5 @@
+package shop;
+
 public class Inventory {
     private ClothingItem[] obj;
     private int itemLength;
@@ -60,9 +62,11 @@ public class Inventory {
     public String toString (){
         StringBuilder cadena= new StringBuilder();
         cadena.append("Name\t\tPrice\t\tSize\n");
-        cadena.append("----------------\n");
+        cadena.append("-----------------------------\n");
         for(int i=0; i<this.obj.length;i++){
-            cadena.append(obj[i].getName()+"\t\t"+ obj[i].getPrice()+"\t\t"+ obj[i].getSize()+"\n");
+            if (obj[i]!= null){
+                cadena.append(obj[i].getName()+"\t\t"+ obj[i].getPrice()+"\t\t"+ obj[i].getSize()+"\n");
+            }
         }
         return String.valueOf(cadena);
 
